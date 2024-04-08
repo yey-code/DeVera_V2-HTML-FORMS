@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="icon" type="image/x-icon" href="./images/logoSolo.png">
+    <title>CHIBOGS: Order Form</title>
+</head>
+<body>
+
+    <!-- body starts here -->
+    <div class='mainBackground'>
+
+        <!-- navbar starts here -->
+        <div class='navbar'>
+            <a href='index.html'><img src='./images/logo.png' class='logo'></a>
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='gallery.html'>Gallery</a></li>
+                <li id='active'><a href='form.html'>Form</a></li>
+                <li><a href='about.html'>About</a></li>
+            </ul>
+        </div>
+        <!-- navbar ends here -->
+        
+        <!-- form starts here -->
+        <div class='order-form-container'>
+
+            <!-- header part -->
+            <header class='order-form-header'>
+                <img src='./images/logoSolo.png' id='logoSolo'>
+                <h1>CHIBOGS : Order Form</h1>
+        
+                <p>
+                    <em>Explore the diverse tastes of CHIBOGS! Fill out your cravings through this order form.</em>
+                </p>
+            </header>
+            <!-- ends here -->
+
+            <!-- form contents -->
+            <form action='' method='get' class='order-form'>
+                <!-- name, email, and age part -->
+                <div class='form-row'>
+                    <label for='full-name'>Name</label>
+                    <input id='full-name' name='full-name' type='text'/>
+                </div>
+        
+                <div class='form-row'>
+                    <label for='email'>Email</label>
+                    <input id='email' name='email' type='email'/>
+                </div>
+
+                <div class='form-row'>
+                    <label for='age'>Age</label>
+                    <input id='age' name='age' type='number'/>
+                </div>
+                
+                <!-- advance drop down (type of cuisine) -->
+                <div class="form-row">
+                    <div id="dropdown">
+                        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                            <span id="dropdownText">Type of Cuisine</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                        <ul class="menu">
+                            <li class="menu-item"><a href="#">Filipino</a></li>
+                            <li class="menu-item"><a href="#">Italian</a></li>
+                            <li class="menu-item"><a href="#">French</a></li>
+                            <li class="menu-item"><a href="#">Mexican</a></li>
+                            <li class="menu-item dropdown">
+                                <a href="#" class="submenu-toggle">
+                                    <span>Healthy Options</span>
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li class="submenu-item"><a href="#">Vegetarian</a></li>
+                                    <li class="submenu-item"><a href="#">Vegan</a></li>
+                                    <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item dropdown">
+                                <a href="#" class="submenu-toggle">
+                                    <span>Specials</span>
+                                    <i class="fa-solid fa-caret-right"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li class="submenu-item"><a href="#">Smörgåsbord</a></li>
+                                    <li class="submenu-item"><a href="#">Curanto</a></li>
+                                    <li class="submenu-item"><a href="#">Döner Kebab</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- dropdown (mode of payment) -->
+                <div class='form-row'>
+                    <label for='mop'>Mode of Payment</label>
+                    <select id='mop' name='mop' required>
+                    <option value='' disabled>-- Choose a payment type --</option>
+                    <option value='cash'>Cash</option>
+                    <option value='gcash'>GCash</option>
+                    <option value='paymaya'>PayMaya</option>
+                    </select>
+                </div>
+                
+                <!-- radiobutton (dining options) -->
+                <fieldset class='legacy-form-row'>
+                    <legend>Dining Options</legend>
+                    <input id='dining-option-1' name='dining-option' type='radio' value='dine-in' checked/>
+                    <label for='dining-option-1' class='radio-label'>Dine - in</label>
+
+                    <input id='dining-option-2' name='dining-option' type='radio' value='take-out'/>
+                    <label for='dining-option-2' class='radio-label'>Take - out</label>
+                </fieldset>
+                
+                <!-- textarea (comments/instructions) -->
+                <div class='form-row'>
+                    <label for='abstract'>Comments / Instructions</label>
+                    <textarea id='abstract' name='abstract'></textarea>
+                    <div class='instructions'>You can put your comments or instructions here.</div>
+                </div>
+                
+                <!-- order placed and cancel button -->
+                <div class='button-row'>
+                    <button type='button' id='place-order'>Place Order</button>
+                    <button type='button' id='cancel'><span id='cancelSpan'></span>Cancel</button>
+                </div>
+            </form>
+            <!-- form contents ends here -->
+        </div>
+        <!-- form ends here -->
+
+    </div>
+    <!-- body ends here -->
+
+    <script src="form.js"></script>
+</body>
+</html>
