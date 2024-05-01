@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/gallery.css">
+    <script src="https://kit.fontawesome.com/a156ac4d3f.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./images/logoSolo.png">
+
     <title>CHIBOGS: Gallery</title>
 </head>
 <body>
@@ -12,14 +15,16 @@
     <div class="mainBackground">
 
         <!-- navbar starts here -->
-        <div class="navbar">
-            <a href="index.html"><img src="./images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li id="active"><a href="gallery.html">Gallery</a></li>
-                <li><a href="form.html">Form</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+        <div class='outer-navbar'>
+            <div class="navbar">
+                <a href="index.html"><img src="./images/logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
         </div>
         <!-- navbar ends here -->
 
@@ -31,5 +36,76 @@
 
     </div>
     <!-- body ends here -->
+
+    <!-- footer starts here -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="about-text">About Us</h2>
+
+                <p class="about-chibog">C H I B O G S is a multi-cuisine restaurant. 
+                    We offer a diverse menu inspired by culinary 
+                    traditions from around the world, crafted by 
+                    our passionate chefs. Our commitment to 
+                    authenticity, innovation, and sustainability 
+                    ensures a memorable dining experience for every 
+                    guest. Come indulge in a symphony of flavors at 
+                    C H I B O G S today!</p>
+
+                <div class="contact">
+                    <p><i class="fa-solid fa-phone"></i> &nbsp; 0912-345-6789</p>
+                    <p><i class="fa-solid fa-envelope"></i> &nbsp; info@chibogs.com</p>
+                </div>
+
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>C H I B O G S Links</h2>
+                <br>
+                <ul>
+                    <a href="index.html">
+                        <li><i class="fa-solid fa-house"></i>          Home</li>
+                    </a>
+
+                    <a href="gallery.html">
+                        <li><i class="fa-solid fa-images"></i>          Gallery</li>
+                    </a>
+
+                    <a href="form.html">
+                        <li><i class="fa-solid fa-note-sticky"></i>          Form</li>
+                    </a>
+
+                    <a href="about.html">
+                        <li><i class="fa-solid fa-circle-info"></i>          About</li>
+                    </a>
+
+                    <a href="#">
+                        <li><i class="fa-solid fa-file-circle-check"></i>          Terms and Conditions</li>
+                    </a>
+                </ul>
+            </div>
+    
+            <div class="footer-section feedback-form">
+                <h2>Feedback</h2>
+                <br>
+                <form action="index.html" method="post">
+                    <textarea name="feedback-form-textarea" class="text-input feedback-input" placeholder="Your feedback..."></textarea>
+                    <button type="submit" class="btn-big send-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; C H I B O G S | All Rights Reserved 2024
+        </div>
+    </div>
+    <!-- footer ends here -->
 </body>
 </html>

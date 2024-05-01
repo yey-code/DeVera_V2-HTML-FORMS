@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="icon" type="image/x-icon" href="./images/logoSolo.png">
+    
     <title>CHIBOGS: Home</title>
 </head>
 <body>
@@ -13,14 +16,16 @@
     <div class="mainBackground">
 
         <!-- navbar starts here -->
-        <div class="navbar">
-            <a href="index.html"><img src="./images/logo.png" class="logo"></a>
-            <ul>
-                <li id="active"><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="form.html">Form</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+        <div class="outer-navbar">
+            <div class="navbar">
+                <a href="index.html"><img src="./images/logo.png" class="logo"></a>
+                <ul class="list-navbar">
+                    <li id="active-nav" class="navbar-item"><a href="index.html">Home</a></li>
+                    <li class="navbar-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="navbar-item"><a href="form.html">Form</a></li>
+                    <li class="navbar-item"><a href="about.html">About</a></li>
+                </ul>
+            </div>
         </div>
         <!-- navbar ends here -->
 
@@ -28,14 +33,230 @@
         <div class="content">
             <h1>Savor the Fusion <br>Feast on Diversity</h1>
             <p>Experience a culinary journey beyond borders here at CHIBOGS</p>
-            <div>
-                <button type="button"><span></span><a href="form.html">ORDER NOW</a></button>
-            </div>
+            
+            <button id="orderBtn" type="button"><span class="order-now"></span><a href="form.html">ORDER NOW</a></button>
         </div>
         <!-- content ends here -->
-
     </div>
     <!-- body ends here -->
+
+    <div class="carousel-label">
+        <h2 class="carousel-label-title">Our Menu</h2>
+        <p class="carousel-label-desc">Welcome to Chibogs! Our menu blends Filipino, Italian, Mexican, and French cuisines. 
+            Indulge in Filipino favorites like Bulalo, savor Italian classic like Braciolea, dive into 
+            Mexican delights like Beef Fajitas, and enjoy French specialties like Beef Bourguignon. Vegetarian options and 
+            chef's specials are available for a truly diverse dining experience!</p>
+    </div>
+
+    <!-- carousel starts here -->
+    <div class="carousel-container">
+        <div id="chibogs-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#chibogs-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#chibogs-carousel" data-slide-to="1"></li>
+                <li data-target="#chibogs-carousel" data-slide-to="2"></li>
+                <li data-target="#chibogs-carousel" data-slide-to="3"></li>
+                <li data-target="#chibogs-carousel" data-slide-to="4"></li>
+                <li data-target="#chibogs-carousel" data-slide-to="5"></li>
+            </ol>
     
+            <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                    <img class="d-block w-100 c-image" src="./images/bulaloImage.png" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bulalo</h5>
+                        <p>Bulalo is a Filipino beef soup dish made with bone-in beef shanks and 
+                            marrow bones, simmered for hours until the meat is tender and flavorful, 
+                            and the broth rich and savory.</p>
+        
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+    
+                <div class="carousel-item c-item">
+                    <img class="d-block w-100 c-image" src="./images/bracioleImage.png" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Braciole</h5>
+                        <p>Braciole is an Italian dish consisting of thinly sliced meat, typically beef, 
+                            rolled with a savory filling such as breadcrumbs, cheese, herbs, and sometimes 
+                            cured meats like prosciutto.</p>
+
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+    
+                <div class="carousel-item c-item">
+                    <img class="d-block w-100 c-image" src="./images/beef_fajitasImage.png" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Beef Fajitas</h5>
+                        <p>Beef fajita is a popular Mexican dish consisting of grilled or pan-seared strips of beef, 
+                            typically skirt steak or flank steak, seasoned with spices such as chili powder, cumin, 
+                            and garlic. The beef is often cooked alongside onions and bell peppers, adding flavor and 
+                            texture to the dish..</p>
+                        
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+
+                <div class="carousel-item c-item">
+                    <img class="d-block w-100 c-image" src="./images/boeuf_bourguignonImage.png" alt="Fourth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bœuf bourguignon</h5>
+                        <p>Bœuf bourguignon is a classic French dish originating from the Burgundy region. 
+                            It features tender beef slowly braised in red wine, typically Burgundy wine, 
+                            along with onions, carrots, mushrooms, and herbs.</p>
+                        
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+
+                <div class="carousel-item c-item">
+                    <img class="d-block w-100 c-image" src="./images/vegetarianImage.png" alt="Fifth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Vegetarian Cuisine</h5>
+                        <p>From hearty vegetable stir-fries and vibrant salads to creamy pasta dishes and flavorful 
+                            curries, our vegetarian menu offers something for every palate. Indulge in our signature 
+                            Mushroom Risotto, savor the freshness of our Garden Salad, or dive into the exotic flavors 
+                            of our Vegetable Curry.</p>
+                        
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+
+                <div class="carousel-item c-item">
+                    <img class="d-block w-100 c-image" src="./images/special_cuisineImage.png" alt="Sixth slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Special Cuisine</h5>
+                        <p>Indulge in the Scandinavian delight of smorgasbord, featuring a lavish spread of cold and hot 
+                            dishes. Dive into the rich flavors of curanto, a traditional Chilean dish cooked underground,
+                            combining an assortment of seafood, meats, and vegetables. Craving something exotic? Try our 
+                            mouthwatering doner kebab, a Turkish-inspired dish featuring succulent meat cooked on a vertical 
+                            rotisserie and served in warm flatbread with fresh vegetables and sauces.</p>
+                        
+                        <button type="button" class="btn-big send-btn">Start New Order</button>
+                    </div>
+                </div>
+            </div>
+    
+            <a class="carousel-control-prev" href="#chibogs-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#chibogs-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- carousel ends here -->
+
+    <!-- Full Menu section starts here -->
+    <div class="menu-container">
+        <div class="menu-section">
+            <div class="menu-section-inner">
+                <h2>Best Sellers</h2>
+                <img class="image" src="./images/kare-kareImage.png">
+                <img class="image" src="./images/tiramisuImage.png">
+                <img class="image" src="./images/steak_fritesImage.png">
+            </div>
+
+            <div class="menu-section-inner">
+                <h2>New Products</h2>
+                <img class="image" src="./images/lechonImage.png">
+                <img class="image" src="./images/burritoImage.png">
+                <img class="image" src="./images/chicken _fricasseeImage.png">
+            </div>
+
+            <div class="menu-section-inner">
+                <h2>Categories</h2>
+                <img class="image" src="./images/filipino_categoryImage.png">
+                <img class="image" src="./images/italian_categoryImage.png">
+                <img class="image" src="./images/mexican_categoryImage.png">
+                <img class="image" src="./images/french_categoryImage.png">
+                <img class="image" src="./images/vegetarian_categoryImage.png">
+                <img class="image" src="./images/special_categoryImage.png">
+            </div>
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="./images/sampleImage.png" alt="">
+        </div>
+    </div>
+    <!-- Full Menu section ends here -->
+
+    <!-- footer starts here -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="about-text">About Us</h2>
+
+                <p class="about-chibog">C H I B O G S is a multi-cuisine restaurant. 
+                    We offer a diverse menu inspired by culinary 
+                    traditions from around the world, crafted by 
+                    our passionate chefs. Our commitment to 
+                    authenticity, innovation, and sustainability 
+                    ensures a memorable dining experience for every 
+                    guest. Come indulge in a symphony of flavors at 
+                    C H I B O G S today!</p>
+
+                <div class="contact">
+                    <p><i class="fa-solid fa-phone"></i> &nbsp; 0912-345-6789</p>
+                    <p><i class="fa-solid fa-envelope"></i> &nbsp; info@chibogs.com</p>
+                </div>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/yeyyy1"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_yey2k/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC9UEcH9TvXM22EA83bkfc3w"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section links">
+                <h2 class="chibog-links">C H I B O G S Links</h2>
+                <br>
+                <ul>
+                    <a href="index.html">
+                        <li class="chibog-links-item"><i class="fa-solid fa-house"></i>          Home</li>
+                    </a>
+
+                    <a href="gallery.html">
+                        <li class="chibog-links-item"><i class="fa-solid fa-images"></i>          Gallery</li>
+                    </a>
+
+                    <a href="form.html">
+                        <li class="chibog-links-item"><i class="fa-solid fa-note-sticky"></i>          Form</li>
+                    </a>
+
+                    <a href="about.html">
+                        <li class="chibog-links-item"><i class="fa-solid fa-circle-info"></i>          About</li>
+                    </a>
+
+                    <a href="#">
+                        <li class="chibog-links-item"><i class="fa-solid fa-file-circle-check"></i>          Terms and Conditions</li>
+                    </a>
+                </ul>
+            </div>
+    
+            <div class="footer-section feedback-form">
+                <h2>Feedback</h2>
+                <br>
+                <form action="index.html" method="post">
+                    <textarea name="feedback-form-textarea" class="text-input feedback-input" placeholder="Your feedback..."></textarea>
+                    <button type="submit" class="btn-big send-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer ends here -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a156ac4d3f.js" crossorigin="anonymous"></script>
+    <script src="./javascript/home.js"></script>
 </body>
 </html>
